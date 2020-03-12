@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+    background-color: #003911;
+}
+
+/*Styles for the Body*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    /*border-bottom: 3px solid #931420;*/
+	padding-top: 1.5em;
+	padding-bottom: 2.5em;
+
+}
+
+/*Styles for the Header*/
+header{
+background-color: #003911;
+}
+header h2{
+    text-align: center;
+    color: #9CF3FF;
+}
+/*Hiding the Mobile Menu*/
+#mobile_menu { display: none; }
+
+/*Navigation Bar*/
+/*#nav_menu a.current {
+	color: greenyellow;
+}*/
+#nav_menu ul{
+	list-style-type: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#nav_menu ul li {
+	float: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	display: block;
+	width: 25%;
+	text-align: center;
+	background-color: #296A14;
+}
+#nav_menu ul li a{
+	width: 100%;
+	color: #9CF3FF;
+	font-weight: bold;
+}
+#nav_menu a:link {
+	text-decoration: none;
+}
+#nav_menu ul li ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul{
+	width: 100%;
+}
+#nav_menu ul ul li{
+	float: none;
+}
+#nav_menu ul ul li a {
+	display: block;
+	background-color: #296A14;
+}
+#nav_menu ul li:hover > ul{
+	display: block;
+	background-color: #34D800;
+}
+#nav_menu > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+	float: none;
+}
+/*Styles for Main*/
+main{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #9CF3FF;
+	text-align: center;
+}
+main h1{
+text-align: center;
+text-decoration: underline;
+}
+
+main h2{
+text-align: center;
+text-decoration: underline;
+}
+/*Styles for the Footer */
+
+footer{
+	clear: both;
+}
+footer p{
+	text-align: center;
+	background-color: #296A14;
+	color:white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/*Phone View Landscape Orientation*/
+@media only screen and (max-width: 767px){
+	header img{
+		float: none;
+		text-align: center;
+	}
+	aside div{
+		column-count: 2;
+	}
+	#nav_menu { display: none; }
+	/*display the mobile menu*/
+	#mobile_menu { display: block; }
+	.slicknav_menu { color: #800000 !important;}
+	body {
+		width: 100%;
+		margin: 0;
+		border: none;
+	}
+}
+/*Phone View Portrait Orientation*/
+@media only screen and (max-width: 479px){
+	body{
+		font: 90%;
+	}
+}

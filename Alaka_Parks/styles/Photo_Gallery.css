@@ -1,0 +1,184 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+    background-color: #003911;
+}
+
+/*Styles for the Body*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    /*border-bottom: 3px solid #931420;*/
+	padding-top: 1.5em;
+	padding-bottom: 2.5em;
+
+}
+
+/*Styles for the Header*/
+header{
+background-color: #003911;
+}
+header h1{
+    text-align: center;
+    color: #9CF3FF;
+}
+/*Hiding the Mobile Menu*/
+#mobile_menu { display: none; }
+
+/*Navigation Bar*/
+/*#nav_menu a.current {
+	color: greenyellow;
+}*/
+#nav_menu ul{
+	list-style-type: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#nav_menu ul li {
+	float: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	display: block;
+	width: 25%;
+	text-align: center;
+	background-color: #296A14;
+}
+#nav_menu ul li a{
+	width: 100%;
+	color: #9CF3FF;
+	font-weight: bold;
+}
+#nav_menu a:link {
+	text-decoration: none;
+}
+#nav_menu ul li ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul{
+	width: 100%;
+}
+#nav_menu ul ul li{
+	float: none;
+}
+#nav_menu ul ul li a {
+	display: block;
+	background-color: #296A14;
+}
+#nav_menu ul li:hover > ul{
+	display: block;
+	background-color: #34D800;
+}
+#nav_menu > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+	float: none;
+}
+/*Styles for Main*/
+main{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #9CF3FF;
+	text-align: center;
+}
+main h1{
+	text-align: center;
+	text-decoration: underline;
+}
+
+main h2{
+	text-align: center;
+	text-decoration: underline;
+}
+main img {
+	height: 300px;
+	width: 300px;
+}
+main section{
+	width: 30%;
+	padding-left: 34.5%;
+	font-size: 125%
+}
+main aside{
+	margin-left: 5em;
+	column-count: 2;
+	/*padding-left: 30%;*/
+	/*padding-right: 30%;*/
+}
+.size{
+	height: 300px;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+.column{
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+/*Styles for the Footer */
+
+footer{
+	clear: both;
+}
+footer p{
+	text-align: center;
+	background-color: #296A14;
+	color:white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/*Phone View Landscape Orientation*/
+@media only screen and (max-width: 767px){
+	header img{
+		float: none;
+		text-align: center;
+	}
+	aside div{
+		column-count: 2;
+	}
+	#nav_menu { display: none; }
+	/*display the mobile menu*/
+	#mobile_menu { display: block; }
+	.slicknav_menu { color: #800000 !important;}
+	body {
+		width: 100%;
+		margin: 0;
+		border: none;
+	}
+}
+/*Phone View Portrait Orientation*/
+@media only screen and (max-width: 479px){
+	body{
+		font: 90%;
+	}
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+	.column {
+		flex: 50%;
+		max-width: 50%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
